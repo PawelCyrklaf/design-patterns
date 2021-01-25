@@ -1,14 +1,7 @@
 <?php declare(strict_types=1);
 
-class HomeProductDecorator implements Product
+class HomeProductDecorator extends ProductDecorator
 {
-    private Product $product;
-
-    public function __construct(Product $product)
-    {
-        $this->product = $product;
-    }
-
     public function getPrice()
     {
         return $this->product->getPrice() + 50;
